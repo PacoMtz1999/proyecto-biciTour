@@ -1,0 +1,40 @@
+{%extends "inicio/encabezado.html"%}
+
+{%block titulo%}BiciTour - Recorridos realizados{%endblock%}
+
+{%block bread%}
+<li class="breadcrumb-item"><a href="{%url 'Principal'%}">Home</a></li>
+<li class="breadcrumb-item"><a href="#">Recorridos</a></li>
+<li class="breadcrumb-item active" aria-current="page">Recorridos realizados</li>
+{%endblock%}
+
+{%block contenido%}
+<!--Mensaje-->
+<div class="container">
+    <h1 class="display-4">Recorridos realizados</h1>
+    <p class="mt-1">Hecha un vistazo a tus recorridos realizados</p>
+</div>
+<!--End mensaje-->
+<div class="container mt-3">
+    <!--Cards-->
+    <div class="card">
+        {% for recorridoR in recorridosRea %}
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{recorridoR.recorrido}}</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Nombre:</strong> {{recorridoR.nombre}}</li>
+                    <li class="list-group-item"><strong>Email:</strong> {{recorridoR.email}}</li>
+                    <li class="list-group-item"><strong>Número de teléfono:</strong> {{recorridoR.telefono}}</li>
+                    <li class="list-group-item"><strong>Número de personas:</strong> {{recorridoR.nPersonas}}</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Fecha del recorrido: {{recorridoR.created}}</small>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+    <!--end Cards-->
+</div>
+{%endblock%}

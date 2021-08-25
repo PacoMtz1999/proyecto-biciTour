@@ -1,0 +1,74 @@
+{%extends "inicio/encabezado.html"%}
+
+{%block titulo%}BiciTour - Nosotros{%endblock%}
+
+{%block bread%}
+<li class="breadcrumb-item"><a href="{%url 'Principal'%}">Home</a></li>
+<li class="breadcrumb-item active" aria-current="page">Nosotros</li>
+{%endblock%}
+
+{%block contenido%}
+<!--Body-->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 mt-5">
+            <h1>Quiénes Somos</h1>
+        </div>
+        <div class="col-12 col-md-6 mt-5">
+            <p style="text-align: justify;">Nosotros somos cuatro
+                jóvenes estudiantes de la Universidad Tecnológica de Morelia (UTM) que vuelven realidad un proyecto
+                que nació como un sueño.</p>
+        </div>
+    </div>
+</div>
+<div class="container mt-3">
+    <h1 class="text-center">Equipo de trabajo</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 mt-5">
+            <h1>Luis Arturo Nambo Villa</h1>
+            {%load static%}
+            <img src="{%static 'inicio/images/NamboLuisArturo.jpeg'%}" class="img-fluid">
+        </div>
+        <div class="col-12 col-md-6 mt-5">
+            <p class="mt-5" style="text-align: justify;">¡Hola!, mi nombre es  Luis Arturo Nambo Villa estudio la ingeniería en desarrollo y gestión de software en la universidad tecnología de Morelia (UTM) actualmente curso el 9 cuatrimestre de la carrera y formo parte del equipo encargado del desarrollo de la página web de la empresa dedicada a realizar recorridos por bicicleta por México (BiciTour).</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 mt-5">
+            <p class="mt-5" style="text-align: justify;">¡Hola!, mi nombre es Francisco Javier Martínez Oliveros estudio la ingeniería en desarrollo y gestión de software en la universidad tecnología de Morelia (UTM) actualmente curso el 9 cuatrimestre de la carrera y formo parte del equipo encargado del desarrollo de la página web de la empresa dedicada a realizar recorridos por bicicleta por México (BiciTour).</p>
+        </div>
+        <div class="col-12 col-md-6 mt-5">
+            <h1>Francisco Javier Martínez Oliveros</h1>
+            <img src="{%static 'inicio/images/MartinezFranciscoJavier.jpg'%}" class="img-fluid">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 mt-5">
+            <h1>Ángel Valadez García</h1>
+            <img src="{%static 'inicio/images/ValadezAngel.jpeg'%}" class="img-fluid">
+        </div>
+        <div class="col-12 col-md-6 mt-5">
+            <p class="mt-5" style="text-align: justify;">¡Hola!, mi nombre es Ángel Valadez García estudio la ingeniería en desarrollo y gestión de software en la universidad tecnología de Morelia (UTM) actualmente curso el 9 cuatrimestre de la carrera y formo parte del equipo encargado del desarrollo de la página web de la empresa dedicada a realizar recorridos por bicicleta por México (BiciTour).</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 mt-5">
+            <p class="mt-5" style="text-align: justify;">¡Hola!, mi nombre es Jesús Villa Pérez estudio la ingeniería en desarrollo y gestión de software en la universidad tecnología de Morelia (UTM) actualmente curso el 9 cuatrimestre de la carrera y formo parte del equipo encargado del desarrollo de la página web de la empresa dedicada a realizar recorridos por bicicleta por México (BiciTour).</p>
+        </div>
+        <div class="col-12 col-md-6 mt-5">
+            <h1>Jesús Villa Pérez</h1>
+            <img src="{%static 'inicio/images/VillaJesusPerez.jpg'%}" class="img-fluid">
+        </div>
+    </div>
+</div>
+<!--End body-->
+
+{%endblock%}

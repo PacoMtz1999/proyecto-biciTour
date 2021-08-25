@@ -1,0 +1,92 @@
+{%extends "inicio/encabezado.html"%}
+
+{%block titulo%}BiciTour - Home{%endblock%}
+
+{%block bread%} <li class="breadcrumb-item active" aria-current="page">Home</li> {%endblock%}
+
+{%block contenido%}
+<!--Carousel-->
+<div class="container">
+    <div id="carouselExampleCaptions" class="carousel slide mt-3" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                {%load static%}
+                <img src="{%static 'inicio/images/moreliaMich.jpg'%}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Morelia, Michoacán</h5>
+                    <p>Disfruta por un paseo en bicicleta por la bellísima ciudad de la cantera rosa.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{%static 'inicio/images/tequilaJalisco.png'%}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Tequila, Jalisco</h5>
+                    <p>Conoce el lugar en donde nace una de las bebidas más consumidas a nivel mundial y es de origen mexicano; el tequila.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{%static 'inicio/images/leonGuanajuato.jpg'%}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>León, Guanajuato</h5>
+                    <p>Conoce una de las ciudades más bonitas de nuestro país, la casa de las momias y el callejón del beso. </p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<!--End carousel-->
+<!--Mensaje-->
+<div class="container mt-3">
+    <h1 class="display-4">Recorridos destacados</h1>
+    <p class="mt-1">Hecha un vistazo a nuestros recorridos más destacados</p>
+</div>
+<!--End mensaje-->
+<!--Cards-->
+<div class="container">
+    <div class="card-group mt-3">
+        <div class="card text-center">
+            <img src="{%static 'inicio/images/moreliaMich.jpg'%}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Morelia, Michoacán</h5>
+                <p class="card-text" style="text-align: justify;">Recorra las bellas y enigmáticas calles de la capital del estado de Michoacán y disfrute de sus bellos paisajes.</p>
+                <a href="{%url 'registroRecorrido'%}" class="btn" style="border-radius: 20px;  background: #20c997;">Vamos álla</a>
+            </div>
+        </div>
+        <div class="card text-center">
+            <img src="{%static 'inicio/images/patzcuaroMich.jpg'%}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Pátzcuaro , Michoacán</h5>
+                <p class="card-text" style="text-align: justify;">Recorramos juntos las calles de este pequeño pueblo mágico del estado de Michoacán y juntos descubramos lo que nos tiene que ofrecer su rica gastronomía, lo hermoso de sus artesanías.</p>
+                <a href="{%url 'registroRecorrido'%}" class="btn" style="border-radius: 20px;  background: #20c997;">Vamos álla</a>
+            </div>
+        </div>
+        <div class="card text-center">
+            <img src="{%static 'inicio/images/leonGuanajuato.jpg'%}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">León, Guanajuato</h5>
+                <p class="card-text" style="text-align: justify;">Demos un recorrido por las estrechas y bellas calles de la ciudad de León en Guanajuato, México y conozcamos las historias que las mismas nos cuentan.</p>
+                <a href="{%url 'registroRecorrido'%}" class="btn" style="border-radius: 20px; background: #20c997;">Vamos álla</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End cards-->
+{%endblock%}
