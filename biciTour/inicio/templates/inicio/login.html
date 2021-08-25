@@ -1,0 +1,23 @@
+{%extends "inicio/encabezado.html"%}
+
+{%block titulo%}BiciTour - Login{%endblock%}
+
+{%block contenido%}
+<!--Carousel-->
+<div class="container">
+    <h1>Inicio de sesión</h1>
+    <form action="" method="POST">
+        {%csrf_token%}
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Password:</label>
+            <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+        </div>
+        <button class="btn" style="border-radius: 20px;  background: #20c997;" type="submit">Enviar</button>
+        <button class="btn btn-danger" style="border-radius: 20px;" type="reset">Borrar</button>
+    </form>
+</div>
+{%endblock%}

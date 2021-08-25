@@ -1,0 +1,76 @@
+{%extends "inicio/encabezado.html"%}
+
+{%block titulo%}BiciTour - Recorridos realizados{%endblock%}
+
+{%block bread%}
+<li class="breadcrumb-item"><a href="{%url 'Principal'%}">Home</a></li>
+<li class="breadcrumb-item"><a href="#">Recorridos</a></li>
+<li class="breadcrumb-item active" aria-current="page">Recorridos realizados</li>
+{%endblock%}
+
+{%block contenido%}
+<!--Mensaje-->
+<div class="container">
+    <h1 class="display-4">Recorridos realizados</h1>
+    <p class="mt-1">Hecha un vistazo a tus recorridos realizados</p>
+</div>
+<!--End mensaje-->
+<div class="container mt-3">
+    <!--Cards-->
+    <div class="card-group mt-3">
+        <div class="card text-center">
+            {%load static%}
+            <img src="{%static 'inicio/images/moreliaMich.jpg'%}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Morelia, Michoacán</h5>
+                <p class="card-text" style="text-align: justify;">This is a wider card with supporting text below as
+                    a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+                <a href="#" class="btn" style="border-radius: 20px;  background: #20c997;">Vamos álla</a>
+            </div>
+            <a href="#collapseExample01" data-bs-toggle="collapse" class="btn"
+                style="border-radius: 20px;  background: #20c997;" role="button" aria-expanded="false"
+                aria-controls="collapseExample">Información del recorrido</a>
+            <div class="collapse mt-2" id="collapseExample01">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Fecha:</strong> Lunes, 12 de julio de 2021</li>
+                    <li class="list-group-item"><strong>Hora:</strong> 10:30 a.m</li>
+                    <li class="list-group-item"><strong>Estado:</strong> Michoacán</li>
+                    <li class="list-group-item"><strong>Ciudad:</strong> Morelia</li>
+                    <li class="list-group-item"><strong>Kilómetros del recorrido:</strong> 5 km</li>
+                    <li class="list-group-item"><strong>Tiempo estimado:</strong> 1:30 hr</li>
+                    <li class="list-group-item"><strong>Punto de inicio:</strong> Catedral de la ciudad</li>
+                    <li class="list-group-item"><strong>Costo:</strong> $ 300.00 pesos mexicanos</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card text-center">
+            {%load static%}
+            <img src="{%static 'inicio/images/patzcuaroMich.jpg'%}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Pátzcuaro, Michoacán</h5>
+                <p class="card-text" style="text-align: justify;">This is a wider card with supporting text below as
+                    a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+                <a href="#" class="btn" style="border-radius: 20px;  background: #20c997;">Vamos álla</a>
+            </div>
+            <a href="#collapseExample03" data-bs-toggle="collapse" class="btn"
+                style="border-radius: 20px;  background: #20c997;" role="button" aria-expanded="false"
+                aria-controls="collapseExample">Información del recorrido</a>
+            <div class="collapse mt-2" id="collapseExample03">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Fecha:</strong> Viernes, 16 de julio de 2021</li>
+                    <li class="list-group-item"><strong>Hora:</strong> 08:30 a.m</li>
+                    <li class="list-group-item"><strong>Estado:</strong> Michoacán</li>
+                    <li class="list-group-item"><strong>Ciudad:</strong> Pátzcuaro</li>
+                    <li class="list-group-item"><strong>Kilómetros del recorrido:</strong> 10 km</li>
+                    <li class="list-group-item"><strong>Tiempo estimado:</strong> 4:30 hr</li>
+                    <li class="list-group-item"><strong>Punto de inicio:</strong> Plaza Vasco de Quiroga</li>
+                    <li class="list-group-item"><strong>Costo:</strong> $ 620.00 pesos mexicanos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--end Cards-->
+</div>
+{%endblock%}

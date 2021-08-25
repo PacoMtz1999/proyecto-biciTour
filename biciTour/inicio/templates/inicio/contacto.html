@@ -1,0 +1,45 @@
+{%extends "inicio/encabezado.html"%}
+
+{%block titulo%}BiciTour - Contacto{%endblock%}
+
+{%block bread%}
+<li class="breadcrumb-item"><a href="{%url 'Principal'%}">Home</a></li>
+<li class="breadcrumb-item active" aria-current="page">Contacto</li>
+{%endblock%}
+
+{%block contenido%}
+<!--Form-->
+<div class="container">
+    <div class="row justify-content-center mt-3 pt-5">
+        <div class="col-md-7">
+            <h1 class="display-4">Contacto</h1>
+            <hr class="bg-info">
+            <p class="pb-0 mb-0">Te invitamos a contactarnos, te responderemos en brevedad.</p>
+            <form action="{% url 'RegistrarComentario'%}" class="form-floating" method="POST">
+                {%csrf_token%}
+                <div class="form-floating mt-3 mb-3">
+                    <input type="text" class="form-control" id="floatingName" placeholder="Nombre" name="nombre">
+                    <label for="floatingName">Nombre</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingMail" placeholder="name@example.com" name="email">
+                    <label for="floatingMail">Correo electrónico</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingText" placeholder="Ingresa el asunto" name="asunto">
+                    <label for="floatingText">Asunto</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                        style="height: 150px; resize: none;" name="mensaje"></textarea>
+                    <label for="floatingTextarea2">Mensaje</label>
+                </div>
+                <button class="btn" style="border-radius: 20px;  background: #20c997;" type="submit">Enviar</button>
+                <button class="btn btn-danger" style="border-radius: 20px;" type="reset">Borrar</button>
+                <!--End form-->
+            </form>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
